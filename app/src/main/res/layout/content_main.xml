@@ -226,7 +226,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/displayLabel"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="61dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="@dimen/displayLableTopMargin"
+        android:textSize="@dimen/displayTextSize"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/displayLabelRightMargin"
+        android:lines="@integer/displayLabelLines" />
 
 </RelativeLayout>

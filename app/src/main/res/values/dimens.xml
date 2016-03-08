@@ -9,4 +9,7 @@
     <dimen name="topMargin">190dp</dimen>
     <dimen name="leftMargin">5dp</dimen>
     <dimen name="topMarginCol23">238dp</dimen>
+    <dimen name="displayTextSize">25sp</dimen>
+    <dimen name="displayLableTopMargin">61dp</dimen>
+    <dimen name="displayLabelRightMargin">10dp</dimen>
 </resources>

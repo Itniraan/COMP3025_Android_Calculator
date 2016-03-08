@@ -75,7 +75,114 @@ public class MainActivity extends AppCompatActivity {
 
         // Create reference for Display Label
         this._displayLabel = (TextView) findViewById(R.id.displayLabel);
+        _displayLabel.setText("0");
 
+        // Create a click listener for
+        this._ACButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lastOperator = "";
+                currentNumber = "";
+                prevNum = 0.0;
+                total = 0.0;
+                displayString = "";
+                _displayLabel.setText("0");
+            }
+        });
+
+        // Create a click listener for
+        this._additionButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentNumber += "0";
+                displayString += "0";
+                _displayLabel.setText(displayString);
+                lastButtonPushed = "0";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._subtractionButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentNumber += "0";
+                displayString += "0";
+                _displayLabel.setText(displayString);
+                lastButtonPushed = "0";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._multiplicationButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentNumber += "0";
+                displayString += "0";
+                _displayLabel.setText(displayString);
+                lastButtonPushed = "0";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._divisionButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentNumber += "0";
+                displayString += "0";
+                _displayLabel.setText(displayString);
+                lastButtonPushed = "0";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._equalsButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentNumber += "0";
+                displayString += "0";
+                _displayLabel.setText(displayString);
+                lastButtonPushed = "0";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._decimalButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (currentNumber == "") {
+                    currentNumber += "0.";
+                    displayString += "0.";
+                } else {
+                    currentNumber += ".";
+                    displayString += ".";
+                }
+                _displayLabel.setText(displayString);
+                lastButtonPushed = ".";
+                buttonsClicked++;
+            }
+        });
+
+        // Create a click listener for
+        this._powerOfButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0) {
+                    // Do nothing here
+                } else {
+                    checkCalc();
+                    lastOperator = "^";
+                    displayString += "^";
+                    _displayLabel.setText(displayString);
+                    lastButtonPushed = "^";
+                    buttonsClicked++;
+                }
+            }
+        });
 
         // Create a click listener for
         this._zeroButton.setOnClickListener( new View.OnClickListener() {
@@ -87,7 +194,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "0";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -100,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "1";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -113,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "2";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -126,7 +230,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "3";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -139,7 +242,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "4";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -152,7 +254,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "5";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -165,7 +266,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "6";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -178,7 +278,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "7";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -191,7 +290,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "8";
                 buttonsClicked++;
             }
-
         });
 
         // Create a click listener for
@@ -204,7 +302,6 @@ public class MainActivity extends AppCompatActivity {
                 lastButtonPushed = "9";
                 buttonsClicked++;
             }
-
         });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
