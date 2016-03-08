@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private String lastButtonPushed = "";
     private String lastOperator = "";
     private Double prevNum = 0.0;
-    private Double newNum = 0.0;
     private Double total = 0.0;
     private int buttonsClicked = 0;
 
@@ -94,11 +93,16 @@ public class MainActivity extends AppCompatActivity {
         this._additionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentNumber += "0";
-                displayString += "0";
-                _displayLabel.setText(displayString);
-                lastButtonPushed = "0";
-                buttonsClicked++;
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
+                    _displayLabel.setText(displayString);
+                } else {
+                    checkCalc();
+                    lastOperator = "+";
+                    displayString += "+";
+                    _displayLabel.setText(displayString);
+                    lastButtonPushed = "+";
+                    buttonsClicked++;
+                }
             }
         });
 
@@ -106,11 +110,16 @@ public class MainActivity extends AppCompatActivity {
         this._subtractionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentNumber += "0";
-                displayString += "0";
-                _displayLabel.setText(displayString);
-                lastButtonPushed = "0";
-                buttonsClicked++;
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
+                    _displayLabel.setText(displayString);
+                } else {
+                    checkCalc();
+                    lastOperator = "-";
+                    displayString += "-";
+                    _displayLabel.setText(displayString);
+                    lastButtonPushed = "-";
+                    buttonsClicked++;
+                }
             }
         });
 
@@ -118,11 +127,16 @@ public class MainActivity extends AppCompatActivity {
         this._multiplicationButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentNumber += "0";
-                displayString += "0";
-                _displayLabel.setText(displayString);
-                lastButtonPushed = "0";
-                buttonsClicked++;
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
+                    _displayLabel.setText(displayString);
+                } else {
+                    checkCalc();
+                    lastOperator = "*";
+                    displayString += "*";
+                    _displayLabel.setText(displayString);
+                    lastButtonPushed = "*";
+                    buttonsClicked++;
+                }
             }
         });
 
@@ -130,11 +144,16 @@ public class MainActivity extends AppCompatActivity {
         this._divisionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentNumber += "0";
-                displayString += "0";
-                _displayLabel.setText(displayString);
-                lastButtonPushed = "0";
-                buttonsClicked++;
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
+                    _displayLabel.setText(displayString);
+                } else {
+                    checkCalc();
+                    lastOperator = "/";
+                    displayString += "/";
+                    _displayLabel.setText(displayString);
+                    lastButtonPushed = "/";
+                    buttonsClicked++;
+                }
             }
         });
 
@@ -142,11 +161,18 @@ public class MainActivity extends AppCompatActivity {
         this._equalsButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                currentNumber += "0";
-                displayString += "0";
-                _displayLabel.setText(displayString);
-                lastButtonPushed = "0";
-                buttonsClicked++;
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
+                    _displayLabel.setText(displayString);
+                } else if (lastOperator.equals("")) {
+                    total = Double.parseDouble(displayString);
+                    _displayLabel.setText(displayString);
+                } else {
+                    checkCalc();
+                    lastOperator = "";
+                    displayString = total.toString();
+                    currentNumber = total.toString();
+                    _displayLabel.setText(displayString);
+                }
             }
         });
 
@@ -154,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         this._decimalButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (currentNumber == "") {
+                if (currentNumber.equals("")) {
                     currentNumber += "0.";
                     displayString += "0.";
                 } else {
@@ -171,8 +197,9 @@ public class MainActivity extends AppCompatActivity {
         this._powerOfButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0) {
+                if (lastButtonPushed.equals("+") || lastButtonPushed.equals("-") || lastButtonPushed.equals("*") || lastButtonPushed.equals("/") || lastButtonPushed.equals("^") || buttonsClicked == 0) {
                     // Do nothing here
+                    _displayLabel.setText(displayString);
                 } else {
                     checkCalc();
                     lastOperator = "^";
