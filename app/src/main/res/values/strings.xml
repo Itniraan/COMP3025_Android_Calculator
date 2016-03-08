@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">COMP3025_Android_Calculator</string>
     <string name="action_settings">Settings</string>
+    <string name="displayString" />
+    <string name="ACButtonString">AC</string>
+    <string name="divideButtonString">/</string>
+    <string name="multiplyButtonString">*</string>
+    <string name="additionButtonString">+</string>
+    <string name="subtractionButtonString">-</string>
+    <string name="equalsButtonString">=</string>
+    <string name="decimalButtonString">.</string>
+    <string name="powerOfButtonString">^</string>
+    <string name="zeroButtonString">0</string>
+    <string name="oneButtonString">1</string>
+    <string name="fourButtonString">4</string>
+    <string name="sevenButtonString">7</string>
+    <string name="eightButtonString">8</string>
+    <string name="nineButtonString">9</string>
+    <string name="sixButtonString">6</string>
+    <string name="threeButtonString">3</string>
+    <string name="twoButtonString">2</string>
+    <string name="fiveButtonString">5</string>
 </resources>
