@@ -1,5 +1,11 @@
 package ca.blake.georgian.comp3025_android_calculator;
 
+/**
+ * File Name: COMP3025_Android_Calculator
+ * Author: Blake Murdock (200260568)
+ * Date: Friday, March 11, 2016
+ * Description: This is a calculator app that has been built using Android Studio. It is a replica of the same calculator made for the iPhone using Swift
+ */
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Double total = 0.0;
     private int buttonsClicked = 0;
 
+    // Display screen variable
     private TextView _displayLabel;
 
     // Button variables
@@ -76,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         this._displayLabel = (TextView) findViewById(R.id.displayLabel);
         _displayLabel.setText("0");
 
-        // Create a click listener for
+        // Create a click listener for the AC button
         this._ACButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the addition button
         this._additionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the subtract button
         this._subtractionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the multiplication button
         this._multiplicationButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the division button
         this._divisionButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the equal button
         this._equalsButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the decimal button
         this._decimalButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -193,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the power of (^) button
         this._powerOfButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -211,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 0 button
         this._zeroButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -223,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 1 button
         this._oneButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -235,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 2 button
         this._twoButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -247,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 3 button
         this._threeButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -259,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 4 button
         this._fourButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -271,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 5 button
         this._fiveButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -283,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 6 button
         this._sixButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -295,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 7 button
         this._sevenButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -307,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 8 button
         this._eightButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -319,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create a click listener for
+        // Create a click listener for the 9 button
         this._nineButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
