@@ -4,12 +4,19 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="buttonHeight">10dp</dimen>
-    <dimen name="buttonWidth">1dp</dimen>
+    <dimen name="buttonWidth">20dp</dimen>
     <dimen name="buttonPadding">5dp</dimen>
-    <dimen name="topMargin">190dp</dimen>
+    <dimen name="topMargin">150dp</dimen>
     <dimen name="leftMargin">5dp</dimen>
-    <dimen name="topMarginCol23">238dp</dimen>
-    <dimen name="displayTextSize">25sp</dimen>
+    <dimen name="topMarginCol23">218dp</dimen>
+    <dimen name="displayTextSize">50sp</dimen>
     <dimen name="displayLableTopMargin">61dp</dimen>
     <dimen name="displayLabelRightMargin">10dp</dimen>
+    <dimen name="buttonRightMargin">10dp</dimen>
+    <dimen name="buttonLeftMargin">10dp</dimen>
+    <dimen name="buttonTopMargin">10dp</dimen>
+    <dimen name="buttonBottomMargin">20dp</dimen>
+    <dimen name="buttonTextSize">26sp</dimen>
+    <dimen name="displayWidth">330dp</dimen>
+    <dimen name="displayHeight">60dp</dimen>
 </resources>
